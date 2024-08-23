@@ -1,0 +1,17 @@
+query RunInput {
+  cart {
+    buyerIdentity {
+      customer {
+        email
+        storeCredits: metafield(key: "store_credits" namespace: "custom"){
+          value
+        }
+      }
+    }
+    cost {
+      subtotalAmount {
+        amount
+      }
+    }
+  }
+}
